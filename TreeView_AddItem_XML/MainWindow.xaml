@@ -1,0 +1,23 @@
+﻿<Window x:Class="TreeViewAdv_GettingStarted.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TreeViewAdv_GettingStarted"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="400" Width="450">
+    <Window.Resources>
+        <XmlDataProvider Source="XMLFile1.xml" x:Key="xmlSource" XPath="Products"/>
+    </Window.Resources>
+    <Grid>
+        <syncfusion:TreeViewAdv ItemsSource="{Binding Source={StaticResource xmlSource}, XPath=Product}" >
+            <syncfusion:TreeViewAdv.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding XPath=Feature}">
+                    <TextBlock Text="{Binding XPath=@Name}" />
+                </HierarchicalDataTemplate>
+            </syncfusion:TreeViewAdv.ItemTemplate>
+        </syncfusion:TreeViewAdv>
+    </Grid>
+</Window>
