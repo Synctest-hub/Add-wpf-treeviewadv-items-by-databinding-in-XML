@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Products>
+<Product Name="Tools" >
+
+<Feature Name="Ribbon" >
+<Feature Name="Office2010UI"/>
+<Feature Name="Data Binding Support"/>
+</Feature>
+
+<Feature Name="Docking Manager">
+<Feature Name="Maximization"/>
+<Feature Name="State Persistence"/>
+</Feature>
+
+<Feature Name="TreeView">
+<Feature Name="Editing"/>
+<Feature Name="Sorting"/>
+</Feature>
+
+<Feature Name="Data Editors" >
+<Feature Name="Watermark Text" />
+<Feature Name="Extended Value Scrolling" />
+</Feature>
+</Product>
+</Products>
